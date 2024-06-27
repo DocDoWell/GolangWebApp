@@ -1,9 +1,9 @@
 {{template "base" .}}
 
-{{define "CSS"}}
+{{define "css"}}
 <style>
     .header-container {
-        background-image: url('static/home-page/hounds.jpeg');
+        background-image: url('/static/home-page/hounds.jpeg');
         background-size: cover;
         opacity: 0.9;
         width: 100vw;
@@ -11,10 +11,10 @@
         position: relative;
     }
 
-    @supports (background-image: -webkit-image-set(url('static/home-page/hounds.webp') 1x)) {
+    @supports (background-image: -webkit-image-set(url('/static/home-page/hounds.webp') 1x)) {
         .header-container {
             background-image: -webkit-image-set(
-                url('static/home-page/hounds.webp') 1x
+                url('/static/home-page/hounds.webp') 1x
             )
         }
     }
@@ -38,6 +38,7 @@
 
 {{define "content"}}
 
+
 <div class="header-container">
     <div class="header-child">
         <h1 class="header-text">Go Find a Pet!</h1>
@@ -51,5 +52,4 @@
         </div>
     </div>
 </div>
-
 {{end}}
